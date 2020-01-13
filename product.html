@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   
     <style>
@@ -19,26 +20,12 @@
             margin-left: 10%;
           }
     
-        a:visited{
-            color:purple;
-          }
-    
-        a:hover{
-            color: green;
-          }
-         
+             
    
 
         #leftset{
             margin-top: 25px;
             margin-left: 10px;
-        }
-
-        #prodimg{
-            margin-top: 25px;
-            background-color: aqua;
-            width: 300px;
-            height: 300px;
         }
 
         #productinfo{
@@ -56,11 +43,6 @@
         #carou{
             margin-top: 20px;
         }
-
-        #xyz{
-            background-color: aqua;
-        }
-
         #review{
             border-style: solid;
             text-align: center;
@@ -70,6 +52,62 @@
             margin-top: 20px;
             margin-left: 10px;
         }
+
+        #sidebar{
+            border-radius: 10px;
+            background-color: #4f6358;
+            margin-top: 20px;
+            height: 450px;
+            padding-top: 60px;
+        }
+
+        #head{
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            font-weight: bold;
+            font-size: 1.8em;
+        }
+
+        .links{
+            margin-left: 5px;
+            margin-right: 5px;
+            color:dimgray;
+            margin-top: 10px;
+        }
+
+
+        #alink{
+            border-radius: 10px;
+            background-color: #00b894;
+            color: white;
+        }
+
+        
+        .links a:link{
+            margin-top: 2px;
+            text-decoration: none;
+            color: white;
+            font-family: Lato;
+            font-size: 1.2em;
+            text-align: center;
+            border-bottom: 2px white;
+        }
+
+        .links a:hover{
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+        }
+
+        .links a:active{
+            border-radius: 10px;
+            background-color: green;
+            color: white;
+        }
+
+        
+
 
     </style>
 
@@ -169,20 +207,18 @@
 
       <div class="row" id = "leftset">
         <div class="col-md-2">
-          <div id = "cate">
-              &nbsp;&nbsp;&nbsp;&nbsp;CATEGORIES
-          </div>
-          <div class="list-group">
-            <a href="#" class="list-group-item">Apparel & Accessories</a>
-            <a href="#" class="list-group-item">Baby Products</a>
-            <a href="#" class="list-group-item">Beauty & Health</a>
-            <a href="#" class="list-group-item">Furniture</a>
-            <a href="#" class="list-group-item">Home & Garden</a>
-            <a href="#" class="list-group-item">Luggage & Bags</a>
-            <a href="#" class="list-group-item">Shoes</a>
-            <a href="#" class="list-group-item">Sports & Entertainment</a>
-            <a href="#" class="list-group-item">Watches</a>
-          </div>
+          <div id = "sidebar">
+            <div id = "head">
+                CATEGORIES 
+            </div>
+            <div class = "links">
+                <a class="nav-link" href="#" text>HOME </a>
+                <a class="nav-link" id = "alink" href="#" text>FURNITURE </a>
+                <a class="nav-link" href="#" text>PAINTINGS </a>
+                <a class="nav-link" href="#" text>CARPETS </a>
+                <a class="nav-link" href="#" text>ABOUT US </a>
+              </div>
+        </div>
         </div>
 
         
