@@ -537,8 +537,30 @@ form.search-pane::after {
 }
 
 
+/* ---------------------------------------------------*/
+/* FOOTER*/
+/* ---------------------------------------------------*/
 
+footer {
+    background-color: #333;
+}
 
+.footer-nav {
+    list-style: none;
+    float: left;
+}
 
+.social-links {
+    list-style: none;
+    float: none;
+}
 
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin  20px;
+}
 
+.social-links i {
+    color: #fff;
+}
