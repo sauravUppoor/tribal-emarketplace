@@ -10,16 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
     <style>
-      #cate{
-        font-size: 1.2em;
-        font-style: normal;
-        font-weight: bolder;
-        color: cornflowerblue;
-        offset-position: 10%;
-        margin-left: 10%;
-      }
-
+     
       a:visited{
         color:purple;
       }
@@ -35,15 +28,70 @@
 
       #leftset{
         margin-left: 10px;
+        margin-top: 25px;
       }
 
+      #sidebar{
+            border-radius: 10px;
+            background-color: #4f6358;
+            margin-top: 20px;
+            height: 450px;
+            padding-top: 60px;
+        }
+
+        #head{
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+            font-weight: bold;
+            font-size: 1.8em;
+        }
+
+        .links{
+            margin-left: 5px;
+            margin-right: 5px;
+            color:dimgray;
+            margin-top: 10px;
+        }
+
+
+        #alink{
+            border-radius: 10px;
+            background-color: #00b894;
+            color: white;
+        }
+
+        
+        .links a:link{
+            margin-top: 2px;
+            text-decoration: none;
+            color: white;
+            font-family: Lato;
+            font-size: 1.5em;
+            text-align: center;
+            border-bottom: 2px white;
+        }
+
+        .links a:hover{
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+        }
+
+        .links a:active{
+            border-radius: 10px;
+            background-color: green;
+            color: white;
+        }
+
+        
     </style>
   
   
   </head>
   <body>
     
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <a class="navbar-brand" href="#">Logo</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -77,72 +125,24 @@
             </form>
           </div>
         </nav>
-    
-          <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                      <h2 class="modal-title" id="myModalLabel">Sign in</h2>
-                    </div>
-
-                    <div class="modal-body">
-                      <form class="form-signin" role="form">
-                      <h3 class="form-signin-heading">Sign in with your email address</h3>
-                      <div class="form-group">
-                      <input type="email" class="form-control" placeholder="Email address" required autofocus>
-                    </div>
-
-                    <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password" required>
-                    </div>
-                  
-                  <div class="checkbox">
-                    <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                  </div>
-
-                  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                  </form>
-                  </div>
-                  <div class="row" id = "social">
-                  <div class="col-xs-3">
-                    <a href="#" class="btn btn-facebook btn-large btn-caps btn-block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facebook <span class="icon-facebook"></span></a>
-                  </div>
-                  <div class="col-xs-3">
-                    <a href="" class="btn btn-twitter btn-large btn-caps btnblock">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter <span class="icon-twitter"></span></a>
-                  </div>
-                  <div class="col-xs-3">  
-                    <a href="" class="btn btn-lg btn-caps btn-block"><span class="icon-dribbble"></span></a>
-                  </div>
-                 </div>
-                  <div class="modal-footer">
-
-                </div>
-              </div>
-            </div>
-        </div>
         
         <hr/>
 
         <div class="row" id = "leftset">
-            <div class="col-sm-4 col-md-2">
-              <div id = "cate">
-                  &nbsp;&nbsp;&nbsp;&nbsp;CATEGORIES
+            <div class="col-md-2">
+                <div id = "sidebar">
+                  <div id = "head">
+                      CATEGORIES 
+                  </div>
+                  <div class = "links">
+                      <a class="nav-link" href="#" text>HOME </a>
+                      <a class="nav-link" id = "alink" href="#" text>FURNITURE </a>
+                      <a class="nav-link" href="#" text>PAINTINGS </a>
+                      <a class="nav-link" href="#" text>CARPETS </a>
+                      <a class="nav-link" href="#" text>ABOUT US </a>
+                    </div>
               </div>
-              <div class="list-group">
-                <a href="#" class="list-group-item">Apparel & Accessories</a>
-                <a href="#" class="list-group-item">Baby Products</a>
-                <a href="#" class="list-group-item">Beauty & Health</a>
-                <a href="#" class="list-group-item">Furniture</a>
-                <a href="#" class="list-group-item">Home & Garden</a>
-                <a href="#" class="list-group-item">Luggage & Bags</a>
-                <a href="#" class="list-group-item">Shoes</a>
-                <a href="#" class="list-group-item">Sports & Entertainment</a>
-                <a href="#" class="list-group-item">Watches</a>
               </div>
-            </div>
                 
               <div class="col-sm-8 col-md-9" id = "prod">
                 <div class="row">
