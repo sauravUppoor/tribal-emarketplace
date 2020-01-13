@@ -50,7 +50,10 @@ h3, h4 {
     word-break: 2px;
 }
 
-
+i {
+    cursor: pointer;
+    height: 25px;
+}
 
 a {
     cursor: pointer;
@@ -451,16 +454,18 @@ form.search-pane::after {
     border-bottom: 2px solid rgba(191,90,78,1);
 }
 
-.tab-panel {
+/* -----DETAILS TAB ------ */
+.tab-panel{
     
     display: grid;
     height: 85%;
-    width: 100%;
+    width: 85%;
     text-align: center;
     padding-top: 10px;
     font-size: 22px;
     transition: all 0.2s;
-    margin: 0;
+    align-items: center;
+    margin: 10px 70px;
     
 }
 
@@ -472,13 +477,22 @@ form.search-pane::after {
 
 .user-info-block-1 {
     float: left ;
+    padding-bottom: 10px;
+    
+}
+
+.user-info-block-1 p {
+    padding-bottom: 10px;
 }
 
 .user-info-block-2 {
     width: 450px;
+    margin-right: 50px;
 }
+
 .user-info-block-2 p {
     margin-bottom: 10px;
+    font-weight: 500;
 }
 
 .user-info-block-2 {
@@ -496,8 +510,31 @@ form.search-pane::after {
     float: left;
 }
 
+/* -----PROFILE LISTS PANEL ------*/
+.add-list {
+    
+    margin: 0px 20px;
+    padding: 10px;
+    align-items: center;
+}
 
+.product-list-panel {
+    display: flex;
+    margin-bottom: 5px;
+}
 
+.panel-img, 
+.panel-text,
+.panel-qty,
+.panel-price {
+    display: flex;
+    flex-basis: 25%;
+    flex-direction: column;
+}
+
+.panel-img {
+    height: 100px;
+}
 
 
 
