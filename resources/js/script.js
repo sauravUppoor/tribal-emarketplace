@@ -1,3 +1,4 @@
+
 /* ____________________________________________
              PROFILE DOM
 ______________________________________________*/
@@ -82,3 +83,7 @@ function updateCartTotal() {
     total = Math.round(total * 100) / 100;
     document.getElementsByClassName('total-cart-amount')[0].innerText = '₹ ' + total;
 }
+
+
+
+

@@ -5,17 +5,127 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+      
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
     <style>
-     
-      a:visited{
-        color:purple;
+        .nav-user {
+            background: rgb(201,203,179);
+            background: linear-gradient(270deg, rgba(201,203,179,1) 2%, rgba(162,169,153,1) 15%, rgba(79,99,88,1) 100%);
+        }
+
+        .nav-user li a:hover {
+            color: rgba(79,99,88,1);
+        } 
+        
+        .logo-rest {
+            height: 70px;
+            width: auto;
+            float: left;
+            padding-left: 20px;
+        }
+        
+         form.search-pane input[type=text] {
+          padding: 10px;
+          font-size: 17px;
+          border: 1px solid transparent;   
+          float: left;
+          display: inline-block;
+          width: auto;
+          background: rgba(241, 241, 241, 0.46);
+          border-radius: 20px;
+            color: #fff;
+            outline: none;
+        }
+
+        /* Style the submit button */
+        form.search-pane button {
+            float: left;
+            width: 50px;
+            padding: 10px;
+            background: transparent;
+            color: white;
+            font-size: 17px;
+            border: 1px solid transparent;
+            border-left: none; /* Prevent double borders */
+            cursor: pointer;
+        }
+
+        form.search-pane button:hover {
+            background-color: #fff;
+            font-weight: 500;
+            border-radius: 35px;
+        }
+
+        .search-user:hover {
+            color: rgba(79,99,88,1);
+        }
+
+        .search-seller:hover{
+            color:rgba(191,90,78,1);
+        }
+
+        /* Clear floats */
+        form.search-pane::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+
+
+             .panel {
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 10px 5%;
+            margin: auto;
+            width: 100%;
+            font-weight: 400;
+        }
+        .common-nav {
+            list-style: none;
+
+        }
+
+        .common-nav li {
+           display: inline-block;
+        }
+        a:active{
+            color: white;
+        }
+        .common-nav li a {
+            text-align: center;
+            font-size: 20px;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 7px;
+            text-decoration: none;
+            transition: all 0.3s ;
+            border: 1px solid transparent;
+            margin: 0 4px;
+        }
+
+        .common-nav li a:hover {
+
+            background-color: #fff;
+            font-weight: 500;
+            border-radius: 35px;
+        }
+
+      .prod a:visited{
+        color: black;
       }
+        
+        .prod a:active{
+            color: white;
+        }
 
       a:hover{
         color: green;
@@ -50,7 +160,7 @@
         .links{
             margin-left: 5px;
             margin-right: 5px;
-            color:dimgray;
+            color:#fff;
             margin-top: 10px;
         }
 
@@ -65,7 +175,17 @@
         .links a:link{
             margin-top: 2px;
             text-decoration: none;
-            color: white;
+            color: #fff !important;
+            font-family: Lato;
+            font-size: 1.5em;
+            text-align: center;
+            border-bottom: 2px white;
+        }
+        
+        .sidebar a:link{
+            margin-top: 2px;
+            text-decoration: none;
+            color: #fff !important;
             font-family: Lato;
             font-size: 1.5em;
             text-align: center;
@@ -78,53 +198,35 @@
             color: black;
         }
 
-        .links a:active{
+        .sidebar a:active{
             border-radius: 10px;
             background-color: green;
             color: white;
         }
 
-        
+       
+
     </style>
   
   
   </head>
   <body>
-    
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Logo</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle = "modal" data-target = "#myModal">Login & Signup</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Categories
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Paintings</a>
-                  <a class="dropdown-item" href="#">Carpets</a>
-                  <a class="dropdown-item" href="#">Item 1</a>
-                  <a class="dropdown-item" href="#">Item 2</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">All Categories</a>
-                </div>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </div>
-        </nav>
+        <div class="row panel nav-user">
+                <img class="logo-rest" src="resources/img/logo-white.png" alt="Tribe Stop logo">
+                <form class="search-pane" action="#">
+                      <input type="text" placeholder="Search for products" name="search">
+                      <button class="search-user" type="submit"><i class="icon ion-ios-search"></i></button>
+                </form>
+                <nav>
+                    <ul class="common-nav">
+                        <li><a href="#">Catalogue</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#"><i class="ion-ios-contact"></i></a></li>
+                        <li><a href="#"><i class="ion-ios-cart"></i></a></li>
+                    </ul>
+                </nav>
+        </div>
+      
         
         <hr/>
 
@@ -135,18 +237,18 @@
                       CATEGORIES 
                   </div>
                   <div class = "links">
-                      <a class="nav-link" href="#" text>HOME </a>
-                      <a class="nav-link" id = "alink" href="#" text>FURNITURE </a>
-                      <a class="nav-link" href="#" text>PAINTINGS </a>
-                      <a class="nav-link" href="#" text>CARPETS </a>
-                      <a class="nav-link" href="#" text>ABOUT US </a>
+                      <font color = "white"><a class="nav-link" href="#">HOME </a></font>
+                      <a class="nav-link" id = "alink" href="#">FURNITURE </a>
+                      <a class="nav-link" href="#">PAINTINGS </a>
+                      <a class="nav-link" href="#">CARPETS </a>
+                      <a class="nav-link" href="#">ABOUT US </a>
                     </div>
               </div>
               </div>
                 
-              <div class="col-sm-8 col-md-9" id = "prod">
+              <div class="col-sm-8 col-md-9" >
                 <div class="row">
-                    <div class="col-sm-6 col-md-4">
+                    <div class="col-sm-6 col-md-4" class = "prod">
                         <div class="thumbnail">
                         <img src="http://placehold.it/750x600" alt="" width = "200px" height = "200px">
                         <div class="add-to-cart">
@@ -154,7 +256,7 @@
                         </div>
                         <div class="caption">
                         <h4 class="pull-right">$24.99</h4>
-                        <h4><a href="product.html">1<sup>st</sup> Product</a>
+                        <h4><a class="product-name" href="product.html">1<sup>st</sup> Product</a>
                         </h4>
                         <p>This is a short description. Lorem ipsum dolor sit
                        amet, consectetur adipiscing elit.</p>
@@ -171,33 +273,64 @@
                         </div>
                         </div>
                         </div>
+                    </div> 
+
+                        <!-- Next Product-->
+
+                        <div class="col-sm-6 col-md-4" class = "prod">
+                            <div class="thumbnail">
+                            <img src="http://placehold.it/750x600" alt="" width = "200px" height = "200px">
+                            <div class="add-to-cart">
+                            <a href="#" class="glyphicon glyphicon-plus-sign" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
+                            </div>
+                            <div class="caption">
+                            <h4 class="pull-right">$24.99</h4>
+                            <h4><a class="product-name" href="product.html">1<sup>st</sup> Product</a>
+                            </h4>
+                            <p>This is a short description. Lorem ipsum dolor sit
+                           amet, consectetur adipiscing elit.</p>
+                            <div class="ratings">
+                            <p class="pull-right"><a href="product.
+                           html#comments">15 reviews</a></p>
+                            <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            </p>
+                            </div>
+                            </div>
+                            </div>
                         </div> 
 
+                            
+
                         <!-- Next Product-->
 
-                        <div class="col-sm-6 col-md-4" id = "prod">
+                        <div class="col-sm-6 col-md-4" class = "prod">
                             <div class="thumbnail">
                             <img src="http://placehold.it/750x600" alt="" width = "200px" height = "200px">
                             <div class="add-to-cart">
                             <a href="#" class="glyphicon glyphicon-plus-sign" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
                             </div>
                             <div class="caption">
-                            <h4 class="pull-right">$24.99</h4>
-                            <h4><a href="product.html">1<sup>st</sup> Product</a>
-                            </h4>
-                            <p>This is a short description. Lorem ipsum dolor sit
-                           amet, consectetur adipiscing elit.</p>
-                            <div class="ratings">
-                            <p class="pull-right"><a href="product.
-                           html#comments">15 reviews</a></p>
-                            <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            </p>
-                            </div>
+                                <h4 class="pull-right">$24.99</h4>
+                                <h4><a class="product-name" href="product.html">1<sup>st</sup> Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit
+                               amet, consectetur adipiscing elit.</p>
+                                <div class="ratings">
+                                    <p class="pull-right"><a href="product.
+                                   html#comments">15 reviews</a></p>
+                                    <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    </p>
+                                </div>
                             </div>
                             </div>
                             </div> 
@@ -206,7 +339,7 @@
 
                         <!-- Next Product-->
 
-                        <div class="col-sm-6 col-md-4" id = "prod">
+                        <div class="col-sm-6 col-md-4" class = "prod">
                             <div class="thumbnail">
                             <img src="http://placehold.it/750x600" alt="" width = "200px" height = "200px">
                             <div class="add-to-cart">
@@ -214,38 +347,7 @@
                             </div>
                             <div class="caption">
                             <h4 class="pull-right">$24.99</h4>
-                            <h4><a href="product.html">1<sup>st</sup> Product</a>
-                            </h4>
-                            <p>This is a short description. Lorem ipsum dolor sit
-                           amet, consectetur adipiscing elit.</p>
-                            <div class="ratings">
-                            <p class="pull-right"><a href="product.
-                           html#comments">15 reviews</a></p>
-                            <p>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            </p>
-                            </div>
-                            </div>
-                            </div>
-                            </div> 
-
-                            
-
-                        <!-- Next Product-->
-
-                        <div class="col-sm-6 col-md-4" id = "prod">
-                            <div class="thumbnail">
-                            <img src="http://placehold.it/750x600" alt="" width = "200px" height = "200px">
-                            <div class="add-to-cart">
-                            <a href="#" class="glyphicon glyphicon-plus-sign" data-toggle="tooltip" data-placement="top" title="Add to cart"></a>
-                            </div>
-                            <div class="caption">
-                            <h4 class="pull-right">$24.99</h4>
-                            <h4><a href="product.html">1<sup>st</sup> Product</a>
+                            <h4><a class="product-name" href="product.html">1<sup>st</sup> Product</a>
                             </h4>
                             <p>This is a short description. Lorem ipsum dolor sit
                            amet, consectetur adipiscing elit.</p>
@@ -267,7 +369,7 @@
 
                         <!-- Next Product-->
 
-                        <div class="col-sm-6 col-md-4" id = "prod">
+                        <div class="col-sm-6 col-md-4" class = "prod">
                             <div class="thumbnail">
                             <img src="http://placehold.it/750x600" alt="" width = "200px" height = "200px">
                             <div class="add-to-cart">
@@ -275,7 +377,7 @@
                             </div>
                             <div class="caption">
                             <h4 class="pull-right">$24.99</h4>
-                            <h4><a href="product.html">1<sup>st</sup> Product</a>
+                            <h4><a class="product-name" href="product.html">1<sup>st</sup> Product</a>
                             </h4>
                             <p>This is a short description. Lorem ipsum dolor sit
                            amet, consectetur adipiscing elit.</p>
@@ -296,7 +398,7 @@
 
                             <!-- Next Product-->
 
-                        <div class="col-sm-6 col-md-4" id = "prod">
+                        <div class="col-sm-6 col-md-4" class = "prod">
                             <div class="thumbnail">
                             <img src="http://placehold.it/750x600" alt="" width = "200px" height = "200px">
                             <div class="add-to-cart">
@@ -304,7 +406,7 @@
                             </div>
                             <div class="caption">
                             <h4 class="pull-right">$24.99</h4>
-                            <h4><a href="product.html">1<sup>st</sup> Product</a>
+                            <h4><a class="product-name" href="product.html">1<sup>st</sup> Product</a>
                             </h4>
                             <p>This is a short description. Lorem ipsum dolor sit
                            amet, consectetur adipiscing elit.</p>
@@ -340,7 +442,7 @@
                 </nav>
               </div>
 
-         
+      </div>
               
       
     <!-- Optional JavaScript -->
@@ -348,5 +450,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="resources/js/addToCart.js" type="text/javascript" async></script>     
   </body>
 </html>

@@ -543,6 +543,8 @@ form.search-pane::after {
 
 footer {
     background-color: #333;
+    width: 100%;
+    padding: 10px 30px;
 }
 
 .footer-nav {
@@ -552,13 +554,14 @@ footer {
 
 .social-links {
     list-style: none;
-    float: none;
+    float: right;
 }
 
 .footer-nav li,
 .social-links li {
     display: inline-block;
     margin  20px;
+    padding-left: 10px;
 }
 
 .social-links i {
