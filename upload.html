@@ -8,51 +8,148 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="resources/js/script.js" type="text/javascript"></script>
+      
     <style>
+        .search-seller:hover{
+            color:rgba(191,90,78,1);
+        }
+
         #header{
             text-align: center;
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-weight: 900;
             margin-top: 5px;
         }
+        
+        .nav-seller {
+            background: rgb(220,186,174);
+            background: linear-gradient(270deg, rgba(220,186,174,1) 0%, rgba(204,127,117,1) 20%, rgba(191,90,78,1) 100%);
+        }
+
+        .nav-seller li a:hover {
+            color: rgba(191,90,78,1);
+            outline: none;
+        }
+        
+        .logo-rest {
+            height: 70px;
+            width: auto;
+            float: left;
+            padding-left: 20px;
+        }
+        
+         form.search-pane input[type=text] {
+          padding: 10px;
+          font-size: 17px;
+          border: 1px solid transparent;   
+          float: left;
+          display: inline-block;
+          width: auto;
+          background: rgba(241, 241, 241, 0.46);
+          border-radius: 20px;
+            color: #fff;
+            outline: none;
+        }
+
+        /* Style the submit button */
+        form.search-pane button {
+            float: left;
+            width: 50px;
+            padding: 10px;
+            background: transparent;
+            color: white;
+            font-size: 17px;
+            border: 1px solid transparent;
+            border-left: none; /* Prevent double borders */
+            cursor: pointer;
+        }
+
+        form.search-pane button:hover {
+            background-color: #fff;
+            font-weight: 500;
+            border-radius: 35px;
+        }
+
+        .search-user:hover {
+            color: rgba(79,99,88,1);
+        }
+
+        .search-seller:hover{
+            color:rgba(191,90,78,1);
+        }
+
+        /* Clear floats */
+        form.search-pane::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+
+
+             .panel {
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 10px 5%;
+            margin: auto;
+            width: 100%;
+            font-weight: 400;
+        }
+        .common-nav {
+            list-style: none;
+
+        }
+
+        .common-nav li {
+           display: inline-block;
+        }
+        a:active{
+            color: white;
+        }
+        .common-nav li a {
+            text-align: center;
+            font-size: 20px;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 7px;
+            text-decoration: none;
+            transition: all 0.3s ;
+            border: 1px solid transparent;
+            margin: 0 4px;
+        }
+
+        .common-nav li a:hover {
+
+            background-color: #fff;
+            font-weight: 500;
+            border-radius: 35px;
+        }
     </style>
     </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#"><img src = "logo.png" height = "50px" width = "50px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle = "modal" data-target = "#myModal">Login & Signup</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Categories
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Paintings</a>
-                <a class="dropdown-item" href="#">Carpets</a>
-                <a class="dropdown-item" href="#">Item 1</a>
-                <a class="dropdown-item" href="#">Item 2</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">All Categories</a>
-              </div>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+    <div class="row panel nav-seller">
+            <img class="logo-rest" src="resources/img/logo-white.png" alt="Tribe Stop logo">
+            <form class="search-pane" action="#">
+                  <input type="text" placeholder="Search for products" name="search">
+                  <button class="search-user" type="submit"><i class="icon ion-ios-search"></i></button>
+            </form>
+            <nav>
+                <ul class="common-nav">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="upload.html" onclick="showPanel(3,0)">Upload</a></li>
+                    <li><a href="seller.html"><i class="ion-ios-contact"></i></a></li>
+                    <li><a href="seller.html"><i class="ion-ios-trending-up"></i></a></li>
+                </ul>
+            </nav>
+    </div>
 
       <hr/>
 
