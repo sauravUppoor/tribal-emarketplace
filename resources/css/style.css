@@ -330,6 +330,7 @@ form.search-pane button {
     border: 1px solid transparent;
     border-left: none; /* Prevent double borders */
     cursor: pointer;
+    outline: none;
 }
 
 form.search-pane button:hover {
