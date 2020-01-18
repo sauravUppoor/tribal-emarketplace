@@ -8,52 +8,57 @@
           <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
           <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
           <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+          <link rel="stylesheet" href="/public/signup-styles.css">
     </head>
 
         <body>
-        
-            <form action="/customer-signup" method="POST" >
-            <div class="login-wrap">
+          
+            <!-- ghgjhjhjg -->
+            <div class="login-wrap" >
                 
-                <div class="login-html user">
+                <form class="login-html user"  action="/customer-login" method="POST">
                  
-                  <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab"></label>
+                  <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
                   <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-                 
+               
                   <div class="login-form">
                     <div class="sign-in-htm">
                       <div class="group">
                         <label for="user" class="label">Username</label>
-                        <input id="user" type="text" class="input">
+                        <input id="user" type="text" class="input" class="name1">
                       </div>
                       <div class="group">
                         <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
-                      </div>
-                      <div class="group">
+                        <input id="pass" type="password" class="input" data-type="password" class="password1">
+                       </div> 
+                       <div class="group">
                         <input id="check" type="checkbox" class="check" checked>
                         <label for="check"><span class="icon"></span> Keep me Signed in</label>
                       </div>
                       <div class="group">
-                        <a href="user.html" class="button">SIGN IN</a>
-                      </div>
-                      <div class="hr"></div>
+                         
+                   
+                        <button type="submit" class="button">SIGN IN</button>
+                      </div> 
+                       <div class="hr"></div>
                       <div class="foot-lnk">
-                        <a href="#">Forgot Password?</a>
+                        <a href="/customer/forgot">Forgot Password?</a>
                       </div>
-                    </div>
+                    </div> 
+                 
+                    <form class="login-html user"  action="/customer-signup" method="POST">
                     <div class="sign-up-htm">
                       <div class="group">
-                        <label for="user" class="label">Username</label>
-                        <input id="user" type="text" class="input">
+                        <label for="user" class="label" name>Username</label>
+                        <input id="user" type="text" class="input" name="name">
                       </div>
                       <div class="group">
                         <label for="pass" class="label">Email Address</label>
-                        <input id="pass" type="text" class="input">
+                        <input id="pass" type="text" class="input" name="email">
                       </div>
                       <div class="group">
                         <label for="pass" class="label">Password</label>
-                        <input id="pass" type="password" class="input" data-type="password">
+                        <input id="pass" type="password" class="input" data-type="password" name="password">
                       </div>
                       <div class="group">
                         <label for="pass" class="label">Repeat Password</label>
@@ -61,25 +66,29 @@
                       </div>
                       <div class="group">
                         <label for="pass" class="label">Age</label>
-                        <input id="pass" type="number" class="input" min=18>
+                        <input id="pass" type="number" class="input" min=18 name="age">
                       </div>
                       
                       <div class="group">
                         <label for="pass" class="label">Address</label>
-                        <input id="pass" type="text" class="input" name="">
+                        <input id="pass" type="text" class="input" name="address">
                       </div>
                       <div class="group">
                         <label for="pass" class="label">State</label>
-                        <input id="pass" type="text" class="input">
+                        <input id="pass" type="text" class="input" name="state">
+                      </div>
+                      <div class="group">
+                        <label for="pass" class="label">Phone</label>
+                        <input id="pass" type="number" class="input" name="phone">
                       </div>
                       
                       <div class="group">
-                        <button type="submit" class="button">Sign Up</button>
+                       
+                        <button type="submit" class="button">SIGN UP</button>
                       </div>
                       
                   </div>
               </div>
-                </div></div>
-                </form>>
+           
         </body>
 </html>

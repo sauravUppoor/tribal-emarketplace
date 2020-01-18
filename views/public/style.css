@@ -1,0 +1,570 @@
+/* ---------------------------------------------------*/
+/* BASIC SETUP */
+/* ---------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ---------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/* ---------------------------------------------------*/
+
+.rows {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+    color: #fff;
+}
+
+h2 {
+    margin: 30px;
+}
+
+h3, h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    word-break: 2px;
+}
+
+i {
+    cursor: pointer;
+    height: 25px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.logged-in-body {
+    max-height: 90%;
+    margin-top: 50px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+/* -----BUTTONS----- */
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+    text-decoration: none;
+    border: 1px solid #e67e22;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    color: #fff;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+.btn-full:link,
+.btn-ful:visited {
+    background-color: #e67e22;
+    
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+    
+}
+
+.btn-full:hover,
+.btn-ful:active {
+    background-color: #d35400;
+    border-color: #d35400;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #d35400;
+    background-color: #d35400;
+    color: #fff;
+    
+}
+
+
+/* ---------------------------------------------------*/
+/* HEADER */
+/* ---------------------------------------------------*/
+
+
+header {
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed; 
+    padding-top: 0;
+}
+
+.title-text-box {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* ----- HEADER CALL TO ACTIONS -----*/
+.one-whole {
+    display: inline-block;
+}
+
+.headline-ctas {
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+    color: #fff;
+    height: auto;
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    width: 100%;
+}
+
+.header-cta-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    color: #626262;
+    display: flex;
+    flex-basis: 45%;
+    flex-direction: column;
+    margin: 8px;
+    padding: 10px 25px;
+    justify-content: center;
+}
+
+.headline-cta a {
+    display: inline-block;
+    font-size: 16px;
+    
+}
+    
+.logo {
+    height: 130px;
+    width: auto;
+    float: left;
+    padding-left: 20px;
+}
+
+.logo-rest {
+    height: 70px;
+    width: auto;
+    float: left;
+}
+
+.profile-pic {
+    height: 100px;
+    width: auto;
+    border-radius: 20px;
+}
+/* ---------------------------------------------------*/
+/* MAIN-NAVBAR */
+/* ---------------------------------------------------*/
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 50px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin: 0px 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    margin: auto;
+	padding: 8px 0;
+    text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	border-bottom: 2px solid transparent; /* We want border exist before hover, but not yet visible.*/
+	transition: border-bottom 0.2s;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+	color: white;
+}
+
+
+.main-nav li a:hover,
+.main-nav li a:active {
+	border-bottom: 2px solid #d35400; /* Visible on hover */
+}
+
+/* ---------------------------------------------------*/
+/* COMMON-NAVBAR */
+/* ---------------------------------------------------*/
+.panel {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 5%;
+    margin: auto;
+    width: 100%;
+    font-weight: 400;
+}
+.common-nav {
+    list-style: none;
+    
+}
+
+.common-nav li {
+   display: inline-block;
+}
+.common-nav li a {
+    text-align: center;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 7px;
+    text-decoration: none;
+    transition: all 0.3s ;
+    border: 1px solid transparent;
+    margin: 0 4px;
+}
+
+.common-nav li a:hover {
+    
+    background-color: #fff;
+    font-weight: 500;
+    border-radius: 35px;
+}
+
+/* ---------------------------------------------------*/
+/* COMMON-NAVBAR USER MODE */
+/* ---------------------------------------------------*/
+
+.nav-user {
+    background: rgb(201,203,179);
+    background: linear-gradient(270deg, rgba(201,203,179,1) 2%, rgba(162,169,153,1) 15%, rgba(79,99,88,1) 100%);
+}
+
+.nav-user li a:hover {
+    color: rgba(79,99,88,1);
+}
+
+/* ---------------------------------------------------*/
+/* COMMON-NAVBAR SELLER MODE */
+/* ---------------------------------------------------*/
+
+.nav-seller {
+    background: rgb(220,186,174);
+    background: linear-gradient(270deg, rgba(220,186,174,1) 0%, rgba(204,127,117,1) 20%, rgba(191,90,78,1) 100%);
+}
+
+.nav-seller li a:hover {
+    color: rgba(191,90,78,1);
+    outline: none;
+}
+
+
+/* ---------------------------------------------------*/
+/* SEARCH PANE */
+/* ---------------------------------------------------*/
+form.search-pane input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid transparent;   
+  float: left;
+  display: inline-block;
+  width: auto;
+  background: rgba(241, 241, 241, 0.46);
+  border-radius: 20px;
+    color: #fff;
+    outline: none;
+}
+
+/* Style the submit button */
+form.search-pane button {
+    float: left;
+    width: 50px;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    font-size: 17px;
+    border: 1px solid transparent;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+    outline: none;
+}
+
+form.search-pane button:hover {
+    background-color: #fff;
+    font-weight: 500;
+    border-radius: 35px;
+}
+
+.search-user:hover {
+    color: rgba(79,99,88,1);
+}
+
+.search-seller:hover{
+    color:rgba(191,90,78,1);
+}
+
+/* Clear floats */
+form.search-pane::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* ---------------------------------------------------*/
+/* PROFILE PAGE*/
+/* ---------------------------------------------------*/
+
+
+/* -----PROFILE PANEL----- */
+
+.profile-panel {
+    height: 150px;
+    width: 90%;
+    align-items: center;
+    background-color: #e0e0e0;
+    margin: 30px 4.5%;
+    left: 50%;
+    border-radius: 20px;
+    display: flex;
+}
+
+.profile-pane-inner {
+    flex-direction: row;
+    flex-basis: 50%;
+    margin: 30px;
+        
+}
+
+.pp-combined {
+    float: right;
+    display: inline-block;
+}
+
+.user-info-box {
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.user-type {
+    text-transform: uppercase;
+    display: block;
+    color: #fff;
+    border-radius: 9px;
+    padding: 7px;
+    font-size: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.user{
+    background-color: rgba(79,99,88,1);
+}
+
+.seller{
+    background-color: rgba(191,90,78,1);
+}
+
+
+/* -----PROFILE TAB----- */
+.tab-container {
+    width: 100%;
+    height: 350px;
+    display: block;
+    align-items: center;
+}
+
+.tab-container .button-container {
+    height: 15%;
+    margin: 30px 30px;
+}
+        
+.tab-container .button-container button {
+    width: 25%;
+    height: 100%;
+    float: left;
+    border: none;
+    border-bottom: 1px solid #d0cece;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+
+.tab-container .button-container button:hover,
+.tab-container .button-container button:active {
+    transition: all 0.2s;
+}
+
+.tab-user button:hover,
+.tab-user button:active {
+    border-bottom: 2px solid rgba(79,99,88,1);
+}
+
+.tab-seller button:hover,
+.tab-seller button:active {
+    border-bottom: 2px solid rgba(191,90,78,1);
+}
+
+/* -----DETAILS TAB ------ */
+.tab-panel{
+    
+    display: grid;
+    height: 85%;
+    width: 85%;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 22px;
+    transition: all 0.2s;
+    align-items: center;
+    margin: 10px 70px;
+    
+}
+
+.user-info-block-1,
+.user-info-block-2 {
+    display: inline-block;
+    width: 45%;
+}
+
+.user-info-block-1 {
+    float: left ;
+    padding-bottom: 10px;
+    
+}
+
+.user-info-block-1 p {
+    padding-bottom: 10px;
+}
+
+.user-info-block-2 {
+    width: 450px;
+    margin-right: 50px;
+}
+
+.user-info-block-2 p {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.user-info-block-2 {
+    float: right;
+}
+
+.verified {
+    display: inline-block;
+}
+
+.verified p,
+.verified .ion-md-checkmark-circle {
+    width: auto;
+    display: inline-block;
+    float: left;
+}
+
+/* -----PROFILE LISTS PANEL ------*/
+.add-list {
+    
+    margin: 0px 20px;
+    padding: 10px;
+    align-items: center;
+}
+
+.product-list-panel {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.panel-img, 
+.panel-text,
+.panel-qty,
+.panel-price {
+    display: flex;
+    flex-basis: 25%;
+    flex-direction: column;
+}
+
+.panel-img {
+    height: 100px;
+}
+
+
+/* ---------------------------------------------------*/
+/* FOOTER*/
+/* ---------------------------------------------------*/
+
+footer {
+    background-color: #333;
+    width: 100%;
+    padding: 10px 30px;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin  20px;
+    padding-left: 10px;
+}
+
+.social-links i {
+    color: #fff;
+}

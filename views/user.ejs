@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <title>Tribe Stop</title>
+        
+    
+    </head>
+    <body>
+        <div class="row panel nav-user">
+                <img class="logo-rest" src="resources/img/logo-white.png" alt="Tribe Stop logo">
+                <form class="search-pane" action="#">
+                      <input type="text" placeholder="Search for products" name="search">
+                      <button class="search-user" type="submit"><i class="icon ion-ios-search"></i></button>
+                </form>
+                <nav>
+                    <ul class="common-nav">
+                        <li><a href="#">Catalogue</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#"><i class="ion-ios-contact"></i></a></li>
+                        <li><a href="#"><i class="ion-ios-cart"></i></a></li>
+                    </ul>
+                </nav>
+        </div>
+        
+        <div class="profile-panel">
+            <div class="profile-pane-inner">
+                <div class="pp-combined">
+                    <img class="profile-pic" src="resources/img/default-user.png" alt="User Profile Pic">
+                    <a href="#"> <i class="ion-ios-create"></i></a>
+                </div>
+               
+            </div>
+            <div class="user-info-box profile-pane-inner">
+                <h3 class="user-real-name">Sanjay Kumar</h3>
+                <h4 class="user-type user">Customer</h4>
+            </div>
+        </div>
+        
+        <div class="tab-container">
+            <div class="button-container tab-user">
+                <button onclick="showPanel(0,1)">Details</button>
+                <button onclick="showPanel(1,1)">Cart</button>
+                <button onclick="showPanel(2,1)">Orders</button>
+                <button onclick="showPanel(3,1)">Wishlist</button>
+            </div>
+            
+            <div class="tab-panel">
+                <div class="user-info-block-1">
+                    <p>Email Address</p>
+                    <p>Mobile Number</p>
+                    <p>Age</p>
+                    <p>Country</p>
+                    <p>Residential Address</p>
+                </div>
+                
+                <div class="user-info-block-2">
+                    <div class="verifed">
+                        <p>sanjaykumar@gmail.com</p>
+<!--                        <i class="ion-md-checkmark-circle"></i>-->
+                    </div>
+                    <div class="verifed">
+                        <p>+91 1234567890</p>
+<!--                        <i class="ion-md-checkmark-circle"></i>-->
+                    </div>
+                    <p>26 years</p>
+                    <p>India</p>
+                    <p>Old Janpath Street, Old Delhi, Delhi - 111111</p>
+                
+                </div>
+            
+            </div>
+            <div class="tab-panel">
+                <div class="add-list">
+                    <div class="product-list-panel">
+                        <img class="panel-img" src="resources/img/default-product.jpg" alt="default image">
+                        <h4 class="panel-text">Tribal Honey</h4>
+                        <input class="panel-qty" type="number" value="2">
+                        <h4 class="panel-price">₹ 1300</h4>
+                        <i class="ion-md-close-circle"></i>
+                    </div>
+                    <div class="product-list-panel">
+                        <img class="panel-img" src="resources/img/default-product.jpg" alt="default image">
+                        <h4 class="panel-text">Tribal Cloth</h4>
+                        <input class="panel-qty" type="number" value="2">
+                        <h4 class="panel-price">₹ 5000</h4>
+                        <i class="ion-md-close-circle"></i>
+                    </div>
+                    <div class="product-list-panel">
+                        <img class="panel-img" src="resources/img/default-product.jpg" alt="default image">
+                        <h4 class="panel-text">Tribal Carpet</h4>
+                        <input class="panel-qty" type="number" value="2">
+                        <h4 class="panel-price">₹ 8400</h4>
+                        <i class="ion-md-close-circle"></i>
+                    </div>
+                    
+                    <div class="cart-bottom">
+                        <div class="btn-proceed">
+                            <a href="#"><h5>Proceed To Payment</h5></a>
+                        </div>
+
+                        <div class="total-cart-amount"> 
+                            <h3>₹ 4200</h3>
+                        </div>
+                    </div>
+                    
+                
+                </div>
+            
+            
+            </div>
+            <div class="tab-panel">Orders Content</div>
+            <div class="tab-panel">Wishlist Content</div>
+        
+        </div>
+        
+        <script src="resources/js/script.js" type="text/javascript" async></script>
+        <script src="resources/js/addToCart.js" type="text/javascript" async></script>
+        
+    </body>
+
+
+</html>
